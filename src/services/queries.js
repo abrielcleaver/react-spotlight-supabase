@@ -1,5 +1,4 @@
 import { checkError, client } from './client.js';
-
 export async function getMovies() {
   // return the list of all movies
   const resp = await client.from('movies').select('*');
@@ -14,6 +13,8 @@ export async function getMoviesWithDirector() {
 
 export async function getDirectorNames() {
   // return the list of the director's names
+  const resp = await client.from('directors').select('name');
+  return checkError(resp);
 }
 
 export async function getMovieById(id) {

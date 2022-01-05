@@ -20,12 +20,12 @@ test('getMoviesWithDirector returns movies with director', async () => {
   expect(resp[0].directors).not.toBe(undefined);
 });
 
-// test('getDirectorNames returns the list of director names', async () => {
-//   const resp = await getDirectorNames();
-//   expect(resp.length).toBe(9);
-//   expect(resp[0].name).not.toBe(undefined);
-//   expect(Object.keys(resp[0]).length).toBe(1); // should ONLY return the name
-// });
+test('getDirectorNames returns the list of director names', async () => {
+  const resp = await getDirectorNames();
+  expect(resp.length).toBe(9);
+  expect(resp[0].name).not.toBe(undefined);
+  expect(Object.keys(resp[0]).length).toBe(1); // should ONLY return the name
+});
 
 // test('getMovieById returns a specific movie by ID', async () => {
 //   const resp = await getMovieById(2);
