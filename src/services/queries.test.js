@@ -27,27 +27,27 @@ test('getDirectorNames returns the list of director names', async () => {
   expect(Object.keys(resp[0]).length).toBe(1); // should ONLY return the name
 });
 
-// test('getMovieById returns a specific movie by ID', async () => {
-//   const resp = await getMovieById(2);
-//   expect(resp.title).toBe('Episode V - The Empire Strikes Back');
-// });
+test('getMovieById returns a specific movie by ID', async () => {
+  const resp = await getMovieById(2);
+  expect(resp.title).toBe('Episode V - The Empire Strikes Back');
+});
 
-// test('getMovieByTitle should match using title', async () => {
-//   const resp = await getMovieByTitle('Episode V - The Empire Strikes Back');
-//   expect(resp.id).toBe(2);
-// });
+test('getMovieByTitle should match using title', async () => {
+  const resp = await getMovieByTitle('Episode V - The Empire Strikes Back');
+  expect(resp.id).toBe(2);
+});
 
-// test('getOldestMovie returns Episode IV', async () => {
-//   const resp = await getOldestMovie();
-//   expect(resp.title).toBe('Episode IV - A New Hope');
-// });
+test('getOldestMovie returns Episode IV', async () => {
+  const resp = await getOldestMovie();
+  expect(resp.title).toBe('Episode IV - A New Hope');
+});
 
-// test('getMoviesAfter returns all movies after a certain year', async () => {
-//   const resp = await getMoviesAfter(2010);
-//   expect(resp.length).toBe(5);
-// });
+test('getMoviesAfter returns all movies after a certain year', async () => {
+  const resp = await getMoviesAfter(2010);
+  expect(resp.length).toBe(5);
+});
 
-// test('getHighestGrossingMovie returns the movie with the highest box_office amount', async () => {
-//   const resp = await getHighestGrossingMovie();
-//   expect(resp.title).toBe('Star Wars: The Force Awakens');
-// });
+test('getHighestGrossingMovie returns the movie with the highest box_office amount', async () => {
+  const resp = await getHighestGrossingMovie();
+  expect(resp.title).toBe('Star Wars: The Force Awakens');
+});
