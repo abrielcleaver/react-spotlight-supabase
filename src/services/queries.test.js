@@ -14,11 +14,11 @@ test('getMovies should return the list of movies', async () => {
   expect(resp.length).toBe(13);
 });
 
-// test('getMoviesWithDirector returns movies with director', async () => {
-//   const resp = await getMoviesWithDirector();
-//   expect(resp.length).toBe(13);
-//   expect(resp[0].directors).not.toBe(undefined);
-// });
+test('getMoviesWithDirector returns movies with director', async () => {
+  const resp = await getMoviesWithDirector();
+  expect(resp.length).toBe(13);
+  expect(resp[0].directors).not.toBe(undefined);
+});
 
 // test('getDirectorNames returns the list of director names', async () => {
 //   const resp = await getDirectorNames();
